@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://kit.fontawesome.com/711f6376f5.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!--esta propiedad del navegador altera el viewport. Todas las paginas deben contener un metadato
+  como este, en él vamos a especificar dos cosas, aunqque pueden ser más, todo esto en el atributo
+  content. En la propiedad width se define el ancho del dispositivo. Ahi le estamos diciendo que
+  será igual al ancho  del dispositivo. Tambien tenemos un initial-scale que especifica el zoom,
+  que al ser 1.0 practicamente es decirle sin zoom -->
+  <title>Las mejores pizzas de mi ciudad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/normalize.css">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/animate.css">
+</head>
+
+<body>
+  <!-- Aqui va el comentario -->
+  <div class="container">
+    <div class="content animated fadeInDown">
+      <!--elemento que queremos que aparezca animado-->
+      <div class="actions">
+        <a href="../" class="close">
+          <span>X</span>
+        </a>
+      </div>
+      <header>
+        <h2 class="title-item">
+          <span class="position">1</span>
+          <!-- parecido al elemento div,su proposito es que el contenido dentro de este elemento
+            pueda ser seleccionado y estilizado con css, la diferencia es que div es un bloque,
+            mientras que spam
+            se coloca en la misma linea que el resto del contenido  -->
+          Hawaiana
+        </h2>
+      </header>
+      <section>
+        <img src="../assets/images/pizzah.jpg" class="main-image" alt="Deliciosas Pizzas">
+        <div class="text">
+          <address class="address">
+            <i class="fas fa-map-marker-alt"></i>
+            Av Central 500
+          </address>
+          <p class="paragraph">La pizza hawaiana es conocida por incluir piña entre sus ingredientes
+            principales. Con una base de tomate, jamón y queso fundido esta fruta es la indudable
+            protagonista de esta receta. De hecho, aunque varíe en un único ingrediente de una de las
+            pizzas más consumidas del mundo, la hawaiana es objeto de controversia.
+          <p>
+          <p class="paragraph">De los que la odian a los que la aman, todo amante de la pizza tiene
+            una marcada postura ante esta receta en concreto. Pero, a pesar de lo que pueda parecer
+            dado su nombre y su ingrediente estrella,
+            la pizza hawaiana no procede de Hawái.</p>
+          <p class="paragraph">Una de las teorías más comunes es la que indica que la pizza hawaiana
+            se inventó en Alemania, como una variante de la tosta Hawái, muy típica en el país en el
+            germano.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="../javascript/main.js"></script>
+</body>
+
+</html>

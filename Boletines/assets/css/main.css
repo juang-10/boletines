@@ -1,0 +1,225 @@
+/* aqui va el comentario */
+/*negro: #272D2D
+blanco: #F6F8FF
+verde: #54F994
+morado: #A846A0
+gris: #50514F
+rosa  #d500f9
+verde tabla: #C9FFF2 */
+
+
+
+
+html{
+  font-family: 'Nunito', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #d500f9;
+}
+img{
+  max-width: 100%;
+}
+
+a:hover{/*hover es una pseudo clase(los selectores de pseudo clase se distinguen por tener el estado separdo
+  por dos puntos (:) del selector) y es un estado en el que se encutra un elemento cuando el mouse pasa
+  encima del elemento mismo. En este caso estamos especificando que las propiedades que vamos
+  a enlistar dentro de las llaves son especificas de cuando el elemento a, este en el estado hover*/
+  opacity:0.8; /* permite controlar la opacidad y recibe valores decimales*/
+}
+/* a:visited{
+  un estado esclusivo de los links que indica que este link ya ha sido visitado previamente
+} */
+
+/* a:active{
+  background: red;
+comumente se usa en botones y links, este estado normalmente se activa cuando el usuario presiona el boton
+} */
+
+a:focus{
+  /* el estado que reciben los componentes cuando tienen el foco */
+}
+.title{
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container{
+  background: #F6F8F7;
+  background: -webkit-linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+  background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.content{
+  max-width: 960px;
+  width: 100%;
+  height: 80vh;
+  background-color: #fff;
+  /*box-shadow: difenciaHortizontal diferenciaVertical desenfoque amplitud color*/
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  position: relative;
+  /*padding: 1.8em; dar margen al contenido de la tabla*/
+  /* overflow-y: scroll; en Y se correrá hacia abajo
+  overflow-x: hidden; en X estará oculto */
+  overflow: scroll;
+}
+
+.content{
+  padding:1em;
+}
+td{
+  display: block;
+  width: 100%;
+}
+td:nth-of-type(1){
+  font-size:1.5em;
+  font-weight: bold;
+  color: #78EDB8;
+}
+th{
+  display: none;
+}
+
+.actions{
+  position: absolute;
+  top: 1em;
+  right: 1em  ;
+}
+
+.close{
+  height: 40px;
+  width: 40px;
+  color: black;
+  right: 1em;
+  border-radius: 50%;
+  background-color: #78EDB8;
+  display: inline-block; /*para que no ignore los tamaños de arriba*/
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  font-weight: 300; /*tamaño de la fuente*/
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; /*centrar vertical como horizontalmente*/
+}
+.paragraph{
+    line-height: 1.8em;
+    font-weight: 300;
+}
+
+.fa-star{
+color: #FFF200;
+}
+
+.table{
+  width: 100%;
+  border-spacing: 0;
+}
+.table td, .table th{
+  padding: 1em;
+  text-align: left;
+}
+
+.table tr:nth-child(even){ background-color: #C9FFF2;}
+
+.title-item{ /*declaracion del borde de nuestra hoja de estilos*/
+  /* border-bottom-style: solid;
+  border-width: 2px;
+  border-color: #78EDB8; */
+  font-size: 2em;
+  border-bottom: solid 2px #78EDB8; /*especificar  el tipo de borde, tamaño y color (shorthand property)*/
+  padding-bottom:1em;
+  /* padding: arriba derecha abajo izquierda si se toma cuatro valores, así los tomará la página
+  padding: arriba/abajo derecha/izquierda si se toma 2 valores, así los tomará la página */
+  /* padding si se toma un solo valor, ese se aplicará para todos los lados de la página */
+}
+
+.address{
+  font-weight: bold;
+  color: #78EDB8;
+  font-size:1.2em;
+  margin-top: 2em;
+  display: inline-block;
+}
+
+.main-image{
+  float: left;
+  margin-right: 1em;
+  height: 250px;
+}
+
+.position{
+  background-color: #78EDB8;
+  color: white;
+  padding: 0.5em;
+  border-radius: 4px; /*tener esquina redondeada con shorthand property*/
+  margin-right: 0.5em;
+  /* border-top-right-radius: 2em;
+  border-top-left-radius: 2em;        (tener esquinas redondeadas)
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em; */
+}
+
+/*  especificidad en CSS
+especificidad-> indica que debe ir primero, en el ejemplo de abajo nos daremos cuenta
+que background tomará primero el valor de div.content antes que los demás, luego tomará el de content
+ y luego el de div para que tome cualquier otro deberá ponerse una etiqueta !important al final, para especificar
+ el peso de una declaración (como lo vemos en la linea dos), sin embargo se debe evitar usar esta regla a toda costa.
+ ya que se considera mala práctica porque ignora el peso de los selectores.
+ Pero si en la parte de html el div  lleva un Style, este será el que tome primero
+ el navegador.
+div{
+  height: 200px;
+  width: 600px;
+}
+
+div.content{background-color: yellow;}
+div{background-color: black !important;}
+.content{background-color: red;} */
+
+/* Orden jerarquico
+1. important
+2. atributo style
+
+Selectores
+
+1. Slectores por ID
+2. Selectores de clase, atributos y pseudoclases
+3. Selectores de tipo y pseudo elementos
+
+si en el ejemplo de arriba pusieramos
+#div{background-color: blue;}
+#div.conten{background-color: purple;}
+div#div{background-color: grey;}
+este seria el primero que tomaría por mayor especificidad */
+
+/* position: static | relative | absolute | sticky; */
+
+/* top, bottom, left, right */
+
+@media (min-width:900px){
+  th{
+  display: table-cell;
+  }
+  td{
+  width: auto;
+  display: table-cell;
+  }
+  td:nth-of-type(1){
+    font-size: 1em;
+  }
+  .content{
+    padding:1.8em;
+  }
+}
+
+@media (min-height:550px){
+  .content {
+    height: 500px;
+  }
+}
